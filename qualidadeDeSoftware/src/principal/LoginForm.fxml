@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane style="-fx-background-color: #668B8B;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="LoginController">
+   <center>
+      <Pane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label graphicTextGap="7.0" layoutX="324.0" layoutY="166.0" text="Faça o seu Login" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNomeUsuario" layoutX="299.0" layoutY="226.0" prefHeight="27.0" prefWidth="264.0" />
+            <TextField fx:id="tfSenha" layoutX="301.0" layoutY="287.0" prefHeight="27.0" prefWidth="262.0" />
+            <Label graphicTextGap="7.0" layoutX="219.0" layoutY="228.0" text="Usuário:" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="7.0" layoutX="219.0" layoutY="289.0" text="Senha: " textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnEntrar" defaultButton="true" layoutX="499.0" layoutY="359.0" mnemonicParsing="false" onAction="#entrar" style="-fx-background-color: #FFFFFF;" text="Entrar" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
