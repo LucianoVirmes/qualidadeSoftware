@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+
+<BorderPane style="-fx-background-color: #668B8B;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="MenuController">
+   <center>
+      <Pane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <MenuBar style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Usuario">
+            <items>
+              <MenuItem fx:id="mmiCadastroUsuario" mnemonicParsing="false" onAction="#menuCadastroUsuario" text="Cadastro de cliente" />
+                  <MenuItem fx:id="mmiEditarUsuario" mnemonicParsing="false" onAction="#menuEditarUsuario" text="Unspecified Action" />
+            </items>
+          </Menu>
+          <Menu fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuProdutos" text="Produtos">
+               <items>
+                  <MenuItem fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuProdutos" text="Unspecified Action" />
+               </items>
+          </Menu>
+            <Menu fx:id="mmiOfertas" mnemonicParsing="false" onAction="#menuOfertas" style="-fx-background-color: #EEC900;" text="Ofertas">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+          <Menu fx:id="mmiCarrinho" mnemonicParsing="false" onAction="#menuCarrinho" text="Carrinho">
+            <items>
+              <MenuItem fx:id="mmiVisualizarCarrinho" mnemonicParsing="false" onAction="#menuVisualizarCarrinho" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
