@@ -15,8 +15,8 @@
         <menus>
           <Menu mnemonicParsing="false" text="Admin">
             <items>
-                  <MenuItem fx:id="mmiEditarAdmin" mnemonicParsing="false" onAction="#menuEditarUsuario" text="Editar Admin" />
-                  <MenuItem fx:id="mmiAdicionarAdmin" mnemonicParsing="false" onAction="#menuAddUsuario" text="Adcionar Admin" />
+                  <MenuItem fx:id="mmiEditarAdmin" mnemonicParsing="false" onAction="#menuEditarAdmin" text="Editar Admin" />
+                  <MenuItem fx:id="mmiAdicionarAdmin" mnemonicParsing="false" onAction="#menuAddAdmin" text="Adcionar Admin" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Produtos">

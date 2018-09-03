@@ -8,6 +8,9 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
+// ver controllers
+
+
 public class Main extends Application {
 	
 	private static Stage stage;

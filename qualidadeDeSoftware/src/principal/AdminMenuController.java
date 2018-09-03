@@ -8,10 +8,13 @@ import javafx.scene.layout.BorderPane;
 public class AdminMenuController {
 
 	@FXML
+	private BorderPane bpPrincipalAdmin;
+
+	@FXML
 	private MenuItem mmiEditarAdmin;
-	
-    @FXML
-    private MenuItem mmiAdicionarAdmin;
+
+	@FXML
+	private MenuItem mmiAdicionarAdmin;
 
 	@FXML
 	private MenuItem mmiProdutos;
@@ -19,9 +22,11 @@ public class AdminMenuController {
 	@FXML
 	private MenuItem mmiCategorias;
 
-    @FXML
-    private BorderPane bpPrincipalAdmin;
-	
+	@FXML
+	void menuAddAdmin(ActionEvent event) {
+
+	}
+
 	@FXML
 	void menuAddProdutos(ActionEvent event) {
 
@@ -33,7 +38,7 @@ public class AdminMenuController {
 	}
 
 	@FXML
-	void menuEditarUsuario(ActionEvent event) {
+	void menuEditarAdmin(ActionEvent event) {
 
 	}
 }
