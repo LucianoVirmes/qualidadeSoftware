@@ -2,8 +2,9 @@ package principal;
 	
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 
@@ -24,23 +25,29 @@ public class Main extends Application {
 		
 		primaryStage.setTitle("ExemploLogin");
 		
-		Parent fxmlLogin = FXMLLoader.load(getClass().getResource("LoginForm.fxml"));
+		BorderPane fxmlLogin = (BorderPane)FXMLLoader.load(getClass().getResource("LoginForm.fxml"));
 		loginScene = new Scene(fxmlLogin, 800,600);
+		loginScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
-		Parent fxmlMenu = FXMLLoader.load(getClass().getResource("MenuForm.fxml"));
+		BorderPane fxmlMenu = (BorderPane)FXMLLoader.load(getClass().getResource("MenuForm.fxml"));
 		menuClienteScene = new Scene(fxmlMenu, 800,600);
+		menuClienteScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
-		Parent fxmlAdminMenu = FXMLLoader.load(getClass().getResource("AdminMenuForm.fxml"));
+		BorderPane fxmlAdminMenu = (BorderPane)FXMLLoader.load(getClass().getResource("AdminMenuForm.fxml"));
 		menuAdminScene  = new Scene(fxmlAdminMenu, 800,600);
+		menuAdminScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
-		Parent fxmlCadastroCliente = FXMLLoader.load(getClass().getResource("CadastroClienteForm.fxml"));
+		AnchorPane fxmlCadastroCliente = (AnchorPane)FXMLLoader.load(getClass().getResource("CadastroClienteForm.fxml"));
 		cadastroCliente  = new Scene(fxmlCadastroCliente, 800,600);
+		cadastroCliente.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
-		Parent fxmlFinalizarCompra = FXMLLoader.load(getClass().getResource("FinalizarCompraForm.fxml"));
+		AnchorPane fxmlFinalizarCompra = (AnchorPane)FXMLLoader.load(getClass().getResource("FinalizarCompraForm.fxml"));
 		finalizarCompra  = new Scene(fxmlFinalizarCompra, 800,600);
+		finalizarCompra.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
-		Parent fxmlVisualizarProduto = FXMLLoader.load(getClass().getResource("VisualizarProdutoForm.fxml"));
+		AnchorPane fxmlVisualizarProduto = (AnchorPane)FXMLLoader.load(getClass().getResource("VisualizarProdutoForm.fxml"));
 		verProduto  = new Scene(fxmlVisualizarProduto, 800,600);
+		verProduto.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		
 		primaryStage.setScene(loginScene);
 		primaryStage.show();
