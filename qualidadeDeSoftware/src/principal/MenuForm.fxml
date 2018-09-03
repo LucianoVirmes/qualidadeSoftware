@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.Pane?>
 
-
-<BorderPane style="-fx-background-color: #668B8B;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="MenuController">
+<BorderPane style="-fx-background-color: #668B8B;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.MenuController">
    <center>
       <Pane prefHeight="600.0" prefWidth="800.0" BorderPane.alignment="CENTER" />
    </center>
@@ -16,7 +15,6 @@
         <menus>
           <Menu mnemonicParsing="false" text="Usuario">
             <items>
-              <MenuItem fx:id="mmiCadastroUsuario" mnemonicParsing="false" onAction="#menuCadastroUsuario" text="Cadastro de cliente" />
                   <MenuItem fx:id="mmiEditarUsuario" mnemonicParsing="false" onAction="#menuEditarUsuario" text="Unspecified Action" />
             </items>
           </Menu>
