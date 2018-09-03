@@ -14,6 +14,9 @@ public class MenuController {
     private MenuItem mmiEditarUsuario;
 
     @FXML
+    private MenuItem mmiHistorico;
+
+    @FXML
     private MenuItem mmiProdutos;
 
     @FXML
