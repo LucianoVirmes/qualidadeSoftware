@@ -3,6 +3,7 @@ package principal;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.BorderPane;
 
 public class MenuController {
 
@@ -20,6 +21,9 @@ public class MenuController {
 
 	@FXML
 	private MenuItem mmiVisualizarCarrinho;
+	
+    @FXML
+    private BorderPane bpPrincipalCliente;
 
 	@FXML
 	void menuEditarUsuario(ActionEvent event) {
