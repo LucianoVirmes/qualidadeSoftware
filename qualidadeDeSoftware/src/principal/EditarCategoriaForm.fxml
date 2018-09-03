@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="principal.EditarCategoriaController">
+   <children>
+      <Pane prefHeight="377.0" prefWidth="439.0" style="-fx-background-color: #668B8B;">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="Categorias" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="31.0" layoutY="60.0" text="Nome" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNome" layoutX="88.0" layoutY="56.0" />
+            <TableView fx:id="tblCategoria" layoutX="-7.0" layoutY="102.0" onMouseClicked="#selecionaCategoria" prefHeight="200.0" prefWidth="447.0">
+              <columns>
+                <TableColumn fx:id="tbcNome" prefWidth="446.0" text="Nome" />
+              </columns>
+            </TableView>
+            <Button fx:id="btnExcluir" layoutX="31.0" layoutY="315.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
+            <Button fx:id="btnEditar" layoutX="181.0" layoutY="315.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+            <Button fx:id="btnSalvar" layoutX="330.0" layoutY="315.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

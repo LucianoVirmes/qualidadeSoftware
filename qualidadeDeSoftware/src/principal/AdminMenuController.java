@@ -8,6 +8,9 @@ public class AdminMenuController {
 
 	@FXML
 	private MenuItem mmiEditarAdmin;
+	
+    @FXML
+    private MenuItem mmiAdicionarAdmin;
 
 	@FXML
 	private MenuItem mmiProdutos;

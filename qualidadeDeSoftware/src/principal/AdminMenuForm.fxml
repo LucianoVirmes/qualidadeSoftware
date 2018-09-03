@@ -16,16 +16,15 @@
           <Menu mnemonicParsing="false" text="Admin">
             <items>
                   <MenuItem fx:id="mmiEditarAdmin" mnemonicParsing="false" onAction="#menuEditarUsuario" text="Editar Admin" />
+                  <MenuItem fx:id="mmiAdicionarAdmin" mnemonicParsing="false" onAction="#menuAddUsuario" text="Adcionar Admin" />
             </items>
           </Menu>
-          <Menu fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuProdutos" text="Produtos">
+          <Menu mnemonicParsing="false" text="Produtos">
                <items>
-                  <MenuItem fx:id="mmiAdicionarProduto" mnemonicParsing="false" onAction="#menuAddProdutos" text="adicionar produto" />
-                  <MenuItem fx:id="mmiEditarProduto" mnemonicParsing="false" onAction="#menuEditar" text="editar produto" />
-                  <MenuItem fx:id="mmiOfertar" mnemonicParsing="false" onAction="#menuOfertar" text="ofertar produto" />
+                  <MenuItem fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuAddProdutos" text="produtos" />
                </items>
           </Menu>
-          <Menu fx:id="mmiCategoria" mnemonicParsing="false" onAction="#menuCategoria" text="Categoria">
+          <Menu mnemonicParsing="false" text="Categoria">
             <items>
               <MenuItem fx:id="mmiCategorias" mnemonicParsing="false" onAction="#menuCategorias" text="Visualizar categorias" />
             </items>

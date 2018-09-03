@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.EditarAdminController">
+   <children>
+      <Pane layoutY="-7.0" prefHeight="398.0" prefWidth="430.0" style="-fx-background-color: #668B8B;">
+         <children>
+            <Label graphicTextGap="5.0" layoutX="25.0" layoutY="14.0" text="Editar Admin" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="25.0" layoutY="58.0" text="Nome" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="25.0" layoutY="89.0" text="Sobrenome" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="26.0" layoutY="120.0" text="CPF" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="26.0" layoutY="151.0" text="Estado" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="26.0" layoutY="184.0" text="Cidade" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="26.0" layoutY="215.0" text="Bairro" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="27.0" layoutY="247.0" text="Rua" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="26.0" layoutY="278.0" text="Numero" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label graphicTextGap="5.0" layoutX="26.0" layoutY="311.0" text="Email" textFill="WHITE" textOverrun="CLIP">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfNome" layoutX="75.0" layoutY="54.0" prefHeight="27.0" prefWidth="216.0" />
+            <TextField fx:id="tfSobrenome" layoutX="109.0" layoutY="85.0" prefHeight="27.0" prefWidth="182.0" />
+            <TextField fx:id="tfCpf" layoutX="65.0" layoutY="116.0" />
+            <TextField fx:id="tfEstado" layoutX="78.0" layoutY="147.0" />
+            <TextField fx:id="tfCidade" layoutX="81.0" layoutY="180.0" prefHeight="27.0" prefWidth="182.0" />
+            <TextField fx:id="tfBairro" layoutX="75.0" layoutY="211.0" prefHeight="27.0" prefWidth="182.0" />
+            <TextField fx:id="tfRua" layoutX="61.0" layoutY="243.0" prefHeight="27.0" prefWidth="201.0" />
+            <TextField fx:id="tfNumero" layoutX="84.0" layoutY="274.0" prefHeight="27.0" prefWidth="95.0" />
+            <TextField fx:id="tfEmail" layoutX="69.0" layoutY="307.0" prefHeight="27.0" prefWidth="237.0" />
+            <Button fx:id="btnEditar" layoutX="321.0" layoutY="345.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
