@@ -8,26 +8,24 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="principal.ProdutosController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.ProdutosController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #668B8B;">
+      <Pane prefHeight="400.0" prefWidth="620.0" style="-fx-background-color: #668B8B;">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Lista de produtos" textFill="WHITE">
                <font>
                   <Font size="17.0" />
                </font>
             </Label>
-            <TableView fx:id="tblProdutos" layoutY="47.0" onMouseClicked="#selecionaProduto" prefHeight="354.0" prefWidth="700.0">
+            <TableView fx:id="tblProdutos" layoutY="47.0" onMouseClicked="#selecionaProduto" prefHeight="354.0" prefWidth="622.0">
               <columns>
-                <TableColumn fx:id="tbcImagem" prefWidth="161.0" text="Imagem" />
                 <TableColumn fx:id="tbcNome" prefWidth="203.0" text="Nome" />
-                  <TableColumn fx:id="tbcModelo" prefWidth="216.0" text="Modelo" />
-                  <TableColumn fx:id="tbcValor" minWidth="0.0" prefWidth="116.0" text="Valor" />
+                  <TableColumn fx:id="tbcModelo" prefWidth="244.0" text="Modelo" />
+                  <TableColumn fx:id="tbcValor" minWidth="0.0" prefWidth="172.0" text="Valor" />
               </columns>
             </TableView>
             <Label layoutX="350.0" layoutY="17.0" text="Ordenar por:" textFill="WHITE" />
-            <ComboBox fx:id="cbxClassificacao" layoutX="443.0" layoutY="12.0" prefHeight="27.0" prefWidth="216.0" promptText="classificação" />
+            <ComboBox fx:id="cbxClassificacao" layoutX="443.0" layoutY="12.0" prefHeight="27.0" prefWidth="140.0" promptText="classificação" />
          </children>
       </Pane>
    </children>

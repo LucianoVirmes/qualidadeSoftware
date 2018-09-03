@@ -8,11 +8,8 @@ import javafx.scene.input.MouseEvent;
 
 public class ProdutosControler {
 
-	@FXML
-    private TableView<?> tblProdutos;
-
     @FXML
-    private TableColumn<?, ?> tbcImagem;
+    private TableView<?> tblProdutos;
 
     @FXML
     private TableColumn<?, ?> tbcNome;
