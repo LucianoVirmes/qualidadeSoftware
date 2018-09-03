@@ -23,7 +23,7 @@
                   <MenuItem fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuProdutos" text="Unspecified Action" />
                </items>
           </Menu>
-            <Menu fx:id="mmiOfertas" mnemonicParsing="false" onAction="#menuOfertas" style="-fx-background-color: #EEC900;" text="Ofertas">
+            <Menu fx:id="mmiOfertas" mnemonicParsing="false" onAction="#menuOfertas" style="-fx-background-color: #9b9b9b;" text="Ofertas">
               <items>
                 <MenuItem mnemonicParsing="false" text="Action 1" />
               </items>
