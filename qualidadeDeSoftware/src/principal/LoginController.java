@@ -25,12 +25,12 @@ public class LoginController {
 
 	@FXML
 	void cadastrar(ActionEvent event) {
-
+		Main.changeScreen("cadastroCliente");
 	}
 	
 
 	@FXML
 	void entrar(ActionEvent event) {
-		
+		Main.changeScreen("menuCliente");
 	}
 }
