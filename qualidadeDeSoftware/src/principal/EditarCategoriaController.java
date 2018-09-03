@@ -23,18 +23,18 @@ public class EditarCategoriaController {
 	private Button btnExcluir;
 
 	@FXML
-	private Button btnEditar;
+	private Button btnNovo;
 
 	@FXML
 	private Button btnSalvar;
 
 	@FXML
-	void editar(ActionEvent event) {
+	void excluir(ActionEvent event) {
 
 	}
 
 	@FXML
-	void excluir(ActionEvent event) {
+	void novo(ActionEvent event) {
 
 	}
 
@@ -47,4 +47,5 @@ public class EditarCategoriaController {
 	void selecionaCategoria(MouseEvent event) {
 
 	}
+
 }

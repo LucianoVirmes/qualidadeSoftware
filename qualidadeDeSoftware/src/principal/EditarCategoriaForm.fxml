@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="principal.EditarCategoriaController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.EditarCategoriaController">
    <children>
       <Pane prefHeight="377.0" prefWidth="439.0" style="-fx-background-color: #668B8B;">
          <children>
@@ -31,7 +30,7 @@
               </columns>
             </TableView>
             <Button fx:id="btnExcluir" layoutX="31.0" layoutY="315.0" mnemonicParsing="false" onAction="#excluir" text="Excluir" />
-            <Button fx:id="btnEditar" layoutX="181.0" layoutY="315.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+            <Button fx:id="btnNovo" layoutX="181.0" layoutY="315.0" mnemonicParsing="false" onAction="#novo" text="Novo" />
             <Button fx:id="btnSalvar" layoutX="330.0" layoutY="315.0" mnemonicParsing="false" onAction="#salvar" text="Salvar" />
          </children>
       </Pane>
