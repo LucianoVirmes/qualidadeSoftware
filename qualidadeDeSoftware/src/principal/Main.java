@@ -54,8 +54,6 @@ public class Main extends Application {
 		
 		primaryStage.setScene(loginScene);
 		primaryStage.show();
-		
-	
 	}
 	
 	public static void changeScreen(TipoTela tt) {
