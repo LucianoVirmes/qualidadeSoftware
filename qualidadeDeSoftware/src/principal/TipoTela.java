@@ -1,0 +1,7 @@
+package principal;
+
+public enum TipoTela {
+
+	LOGIN, MENUCLIENTE, CADASTROCLIENTE, MENUADMIN, FINALIZACOMPRA, VERPRODUTO;
+
+}

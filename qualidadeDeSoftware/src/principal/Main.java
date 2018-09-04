@@ -58,24 +58,24 @@ public class Main extends Application {
 	
 	}
 	
-	public static void changeScreen(String str) {
-		switch (str) {
-		case "login":
+	public static void changeScreen(TipoTela tt) {
+		switch (tt) {
+		case LOGIN:
 			stage.setScene(loginScene);
 			break;
-		case "menuCliente":
+		case MENUCLIENTE:
 			stage.setScene(menuClienteScene);
 			break;
-		case "cadastroCliente":
+		case CADASTROCLIENTE:
 			stage.setScene(cadastroCliente);
 			break;
-		case "menuAdmin":
+		case MENUADMIN:
 			stage.setScene(menuAdminScene);
 			break;
-		case "finalizaCompra":
+		case FINALIZACOMPRA:
 			stage.setScene(finalizarCompra);
 			break;
-		case "verProduto":
+		case VERPRODUTO:
 			stage.setScene(verProduto);
 			break;
 		}

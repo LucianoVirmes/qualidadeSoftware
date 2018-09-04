@@ -36,6 +36,15 @@ public class CadastroClienteController {
 	    
 	    @FXML
 	    private Button btnCadastrar;
+	    
+	    @FXML
+	    private Button btnVoltar;
+
+
+	    @FXML
+	    void voltar(ActionEvent event) {
+	    		Main.changeScreen(TipoTela.LOGIN);
+	    }
 
 	    @FXML
 	    void cadastrar(ActionEvent event) {

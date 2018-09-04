@@ -15,23 +15,23 @@
         <menus>
           <Menu mnemonicParsing="false" text="Usuario">
             <items>
-                  <MenuItem fx:id="mmiEditarUsuario" mnemonicParsing="false" onAction="#menuEditarUsuario" text="Unspecified Action" />
+                  <MenuItem fx:id="mmiEditarUsuario" mnemonicParsing="false" onAction="#menuEditarUsuario" text="Editar Usuário" />
                   <MenuItem fx:id="mmiHistorico" mnemonicParsing="false" onAction="#menuHistorico" text="Historico" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Produtos">
                <items>
-                  <MenuItem fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuProdutos" text="Unspecified Action" />
+                  <MenuItem fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuProdutos" text="Visualizar produtos" />
                </items>
           </Menu>
             <Menu mnemonicParsing="false" style="-fx-background-color: #9b9b9b;" text="Ofertas">
               <items>
-                <MenuItem fx:id="mmiOferta" mnemonicParsing="false" onAction="#menuOferta" text="Action 1" />
+                <MenuItem fx:id="mmiOferta" mnemonicParsing="false" onAction="#menuOferta" text="ver produtos em oferta" />
               </items>
             </Menu>
           <Menu mnemonicParsing="false" text="Carrinho">
             <items>
-              <MenuItem fx:id="mmiVisualizarCarrinho" mnemonicParsing="false" onAction="#menuVisualizarCarrinho" text="About" />
+              <MenuItem fx:id="mmiVisualizarCarrinho" mnemonicParsing="false" onAction="#menuVisualizarCarrinho" text="Visite seu carrinho" />
             </items>
           </Menu>
         </menus>
