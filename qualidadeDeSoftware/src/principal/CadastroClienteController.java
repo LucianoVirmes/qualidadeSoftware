@@ -39,6 +39,9 @@ public class CadastroClienteController {
 	    
 	    @FXML
 	    private Button btnVoltar;
+	    
+	    @FXML
+	    private TextField tfSenha;
 
 
 	    @FXML

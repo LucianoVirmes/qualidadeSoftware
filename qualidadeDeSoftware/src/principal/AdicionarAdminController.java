@@ -36,6 +36,9 @@ public class AdicionarAdminController {
 
 	@FXML
 	private Button btnCadastrar;
+	
+    @FXML
+    private TextField tfSenha;
 
 	@FXML
 	void cadastrar(ActionEvent event) {
