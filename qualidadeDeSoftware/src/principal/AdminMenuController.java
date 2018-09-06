@@ -1,8 +1,12 @@
 package principal;
 
+import java.io.IOException;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.MenuItem;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 
 public class AdminMenuController {
@@ -24,21 +28,49 @@ public class AdminMenuController {
 
 	@FXML
 	void menuAddAdmin(ActionEvent event) {
-
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("AdicionaAdminForm.fxml"));
+		try {
+			AnchorPane cursoView = (AnchorPane) loader.load();
+			bpPrincipalAdmin.setCenter(cursoView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	@FXML
 	void menuAddProdutos(ActionEvent event) {
-
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("EditarProdutos.fxml"));
+		try {
+			AnchorPane cursoView = (AnchorPane) loader.load();
+			bpPrincipalAdmin.setCenter(cursoView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	@FXML
 	void menuCategorias(ActionEvent event) {
-
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("EditarCategoria.fxml"));
+		try {
+			AnchorPane cursoView = (AnchorPane) loader.load();
+			bpPrincipalAdmin.setCenter(cursoView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 	}
 
 	@FXML
 	void menuEditarAdmin(ActionEvent event) {
-
+		FXMLLoader loader = new FXMLLoader();
+		loader.setLocation(getClass().getResource("EditarAdmin.fxml"));
+		try {
+			AnchorPane cursoView = (AnchorPane) loader.load();
+			bpPrincipalAdmin.setCenter(cursoView);
+		} catch (IOException e1) {
+			e1.printStackTrace();
+		}
 	}
 }

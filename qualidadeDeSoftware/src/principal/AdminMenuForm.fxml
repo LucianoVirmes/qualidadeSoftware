@@ -21,7 +21,7 @@
           </Menu>
           <Menu mnemonicParsing="false" text="Produtos">
                <items>
-                  <MenuItem fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuAddProdutos" text="produtos" />
+                  <MenuItem fx:id="mmiProdutos" mnemonicParsing="false" onAction="#menuAddProdutos" text="Adiciona produtos" />
                </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Categoria">
