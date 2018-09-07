@@ -1,6 +1,8 @@
 package principal;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -22,6 +24,14 @@ public class ProdutosController {
 
     @FXML
     private ComboBox<?> cbxClassificacao;
+
+    @FXML
+    private Button btnSelecionar;
+
+    @FXML
+    void seleciona(ActionEvent event) {
+
+    }
 
     @FXML
     void selecionaProduto(MouseEvent event) {
