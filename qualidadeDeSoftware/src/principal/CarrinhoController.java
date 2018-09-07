@@ -38,7 +38,7 @@ public class CarrinhoController {
 
 	@FXML
 	void finalizarCompra(ActionEvent event) {
-
+		Main.changeScreen(TipoTela.FINALIZACOMPRA);
 	}
 
 	@FXML
