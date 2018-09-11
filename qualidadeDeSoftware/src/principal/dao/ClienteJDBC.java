@@ -42,7 +42,7 @@ public class ClienteJDBC implements ClienteDAO{
 	@Override
 	public void alterar(Cliente dado) {
 		try {
-			String sql = "update cliente set email = ?, nome = ?, sobrenome = ?, senha=?, cpf =?, cidade=?, estado=?, bairro=?, rua=? numero = ? where idcidade = ?";
+			String sql = "update cliente set email = ?, nome = ?, sobrenome = ?, senha=?, cpf =?, cidade=?, estado=?, bairro=?, rua=? numero = ? where codigo = ?";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			
 			statement.setString(1, dado.getEmail());
