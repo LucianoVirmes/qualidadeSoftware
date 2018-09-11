@@ -2,6 +2,7 @@ package principal.model;
 
 public class Cliente {
 
+	private Integer codigo;
 	private String email;
 	private String nome;
 	private String sobrenome;
@@ -75,9 +76,18 @@ public class Cliente {
 	public Cliente() {
 	}
 
-	public Cliente(String email, String nome, String sobrenome, String senha, String cpf, String cidade, String estado,
-			String bairro, String rua, String numero, Carrinho carrinho) {
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
+	public Cliente(Integer codigo, String email, String nome, String sobrenome, String senha, String cpf, String cidade,
+			String estado, String bairro, String rua, String numero, Carrinho carrinho) {
 		super();
+		this.codigo = codigo;
 		this.email = email;
 		this.nome = nome;
 		this.sobrenome = sobrenome;
@@ -178,7 +188,5 @@ public class Cliente {
 	public void setCarrinho(Carrinho carrinho) {
 		this.carrinho = carrinho;
 	}
-	
-	
 
 }
