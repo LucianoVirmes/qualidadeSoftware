@@ -4,14 +4,16 @@ import java.util.ArrayList;
 
 public class Categoria {
 
+	private Integer codigo;
 	private String nome;
 	private ArrayList<Produto> produtos;
 
 	public Categoria() {
 	}
 
-	public Categoria(String nome, ArrayList<Produto> produtos) {
+	public Categoria(Integer codigo, String nome, ArrayList<Produto> produtos) {
 		super();
+		this.codigo = codigo;
 		this.nome = nome;
 		this.produtos = produtos;
 	}
@@ -32,9 +34,17 @@ public class Categoria {
 		this.produtos = produtos;
 	}
 
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
 	@Override
 	public String toString() {
-		return "Categoria [nome=" + nome + ", produtos=" + produtos + "]";
+		return "Categoria [codigo=" + codigo + ", nome=" + nome + ", produtos=" + produtos + "]";
 	}
 
 }

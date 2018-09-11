@@ -2,6 +2,7 @@ package principal.model;
 
 public class Produto {
 
+	private Integer codigo;
 	private String nome;
 	private Double valor;
 	private Boolean disponibilidade;
@@ -13,8 +14,10 @@ public class Produto {
 
 	}
 
-	public Produto(String nome, Double valor, Boolean disponibilidade, String modelo, Categoria categoria) {
+	public Produto(Integer codigo, String nome, Double valor, Boolean disponibilidade, String modelo,
+			Categoria categoria) {
 		super();
+		this.codigo = codigo;
 		this.nome = nome;
 		this.valor = valor;
 		this.disponibilidade = disponibilidade;
@@ -62,10 +65,18 @@ public class Produto {
 		this.categoria = categoria;
 	}
 
+	public Integer getCodigo() {
+		return codigo;
+	}
+
+	public void setCodigo(Integer codigo) {
+		this.codigo = codigo;
+	}
+
 	@Override
 	public String toString() {
-		return "Produto [nome=" + nome + ", valor=" + valor + ", disponibilidade=" + disponibilidade + ", modelo="
-				+ modelo + "]";
+		return "Produto [codigo=" + codigo + ", nome=" + nome + ", valor=" + valor + ", disponibilidade="
+				+ disponibilidade + ", modelo=" + modelo + ", categoria=" + categoria + "]";
 	}
 
 }
