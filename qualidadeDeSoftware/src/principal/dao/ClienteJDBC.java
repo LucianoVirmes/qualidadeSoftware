@@ -28,11 +28,11 @@ public class ClienteJDBC implements ClienteDAO{
 			statement.setString(10, dado.getRua());
 			statement.setString(11, dado.getNumero());
 			
-			statement.executeUpdate();
 			
 			ResultSet rs = statement.getGeneratedKeys();
 			rs.next();
 			dado.setCodigo(rs.getInt(1));
+			statement.executeUpdate();
 			
 		}catch(SQLException e) {
 			e.printStackTrace();

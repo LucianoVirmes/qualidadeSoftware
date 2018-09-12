@@ -57,6 +57,7 @@ public class CadastroClienteController {
 
 	/**
 	 * vonta para a tela de logim
+	 * 
 	 * @param event
 	 */
 	@FXML
@@ -73,40 +74,44 @@ public class CadastroClienteController {
 	@FXML
 	void cadastrar(ActionEvent event) {
 		populaCliente();
-		if(cliente.validaCpf()) {
-			if (verificaCliente()) {
-				clienteDao.inserir(cliente);
-				Alert alerta = new Alert(AlertType.INFORMATION, "Cadastro realizado com sucesso", ButtonType.OK);
-				// Button okButton = (Button)
-				// alerta.getDialogPane().lookupButton(ButtonType.OK);
-				// okButton.setDefaultButton(false);
-				// okButton.setText("OK");
-				final Optional<ButtonType> result = alerta.showAndWait();
-				
-				if (ButtonType.OK.equals(result.get())) {
-					Main.changeScreen(TipoTela.LOGIN);
-				}
-			} else {
-				Alert alerta = new Alert(AlertType.WARNING, "O cadastro não pode ser efetuado", ButtonType.OK);
-				// Button okButton = (Button)
-				// alerta.getDialogPane().lookupButton(ButtonType.OK);
-				// okButton.setDefaultButton(false);
-				// okButton.setText("OK");
-				final Optional<ButtonType> result = alerta.showAndWait();
-				if (ButtonType.OK.equals(result.get())) {
-					novoCliente();
-				}
-			}
+		if (verificaCliente()) {
+			clienteDao.inserir(cliente);
+			Alert alerta = new Alert(AlertType.INFORMATION, "Cadastro realizado com sucesso", ButtonType.OK);
+			// Button okButton = (Button)
+			// alerta.getDialogPane().lookupButton(ButtonType.OK);
+			// okButton.setDefaultButton(false);
+			// okButton.setText("OK");
+			final Optional<ButtonType> result = alerta.showAndWait();
 			
-		}else {
-			Alert alerta = new Alert(AlertType.WARNING, "o CPF não é válido", ButtonType.OK);
+			if (ButtonType.OK.equals(result.get())) {
+				Main.changeScreen(TipoTela.LOGIN);
+			}
+		} else {
+			Alert alerta = new Alert(AlertType.WARNING, "O cadastro não pode ser efetuado", ButtonType.OK);
+//				 Button okButton = (Button)
+//				 alerta.getDialogPane().lookupButton(ButtonType.OK);
+//				 okButton.setDefaultButton(false);
+//				 okButton.setText("OK");
 			final Optional<ButtonType> result = alerta.showAndWait();
 			if (ButtonType.OK.equals(result.get())) {
 				novoCliente();
 			}
 		}
+			
 
-		novoCliente();
+//			{
+//		Alert alerta = new Alert(AlertType.WARNING, "o CPF não é válido", ButtonType.OK);
+//		// Button okButton = (Button)
+//		// alerta.getDialogPane().lookupButton(ButtonType.OK);
+//		// okButton.setDefaultButton(false);
+//		// okButton.setText("OK");
+//		final Optional<ButtonType> result = alerta.showAndWait();
+//		if (ButtonType.OK.equals(result.get())) {
+//			novoCliente();
+//		}
+		//}
+
+	novoCliente();
 
 	}
 
@@ -125,10 +130,11 @@ public class CadastroClienteController {
 		cliente.setEmail(tfEmail.getText());
 		cliente.setSenha(tfSenha.getText());
 	}
-	
+
 	/**
-	 * verifica se o cliente foi totalmente popularizado, e nenhum campo foi esquecido. 
-	 * em caso de não preenchimento de um dos campos retorna falso
+	 * verifica se o cliente foi totalmente popularizado, e nenhum campo foi
+	 * esquecido. em caso de não preenchimento de um dos campos retorna falso
+	 * 
 	 * @return boolean true caso o cliente estiver apto e false caso contrario
 	 */
 	public boolean verificaCliente() {
