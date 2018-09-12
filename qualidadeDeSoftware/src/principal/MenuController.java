@@ -32,7 +32,7 @@ public class MenuController {
 	@FXML
 	void menuEditarUsuario(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("EditarCliente.fxml"));
+		loader.setLocation(getClass().getResource("EditarClienteForm.fxml"));
 		try {
 			AnchorPane View = (AnchorPane) loader.load();
 			bpPrincipalCliente.setCenter(View);
@@ -44,7 +44,7 @@ public class MenuController {
 	@FXML
 	void menuHistorico(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Historico.fxml"));
+		loader.setLocation(getClass().getResource("HistoricoForm.fxml"));
 		try {
 			AnchorPane View = (AnchorPane) loader.load();
 			bpPrincipalCliente.setCenter(View);
@@ -56,7 +56,7 @@ public class MenuController {
 	@FXML
 	void menuOferta(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Oferta.fxml"));
+		loader.setLocation(getClass().getResource("OfertaForm.fxml"));
 		try {
 			AnchorPane View = (AnchorPane) loader.load();
 			bpPrincipalCliente.setCenter(View);
@@ -68,7 +68,7 @@ public class MenuController {
 	@FXML
 	void menuProdutos(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Produtos.fxml"));
+		loader.setLocation(getClass().getResource("ProdutosForm.fxml"));
 		try {
 			AnchorPane View = (AnchorPane) loader.load();
 			bpPrincipalCliente.setCenter(View);
@@ -80,7 +80,7 @@ public class MenuController {
 	@FXML
 	void menuVisualizarCarrinho(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("Carrinho.fxml"));
+		loader.setLocation(getClass().getResource("CarrinhoForm.fxml"));
 		try {
 			AnchorPane View = (AnchorPane) loader.load();
 			bpPrincipalCliente.setCenter(View);
