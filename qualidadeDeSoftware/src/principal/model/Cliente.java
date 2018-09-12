@@ -15,11 +15,21 @@ public class Cliente {
 	private String numero;
 
 	private Carrinho carrinho;
-
+	
+	/**
+	 * informa o login e senha do cliente para a validação
+	 * @param login
+	 * @param senha
+	 * @return booleano informando se o login é valido ou não
+	 */
 	public boolean verificalogin(String login, String senha) {
 		return (login.equals(this.email) && senha.equals(this.senha));
 	}
 
+	/**
+	 * verifica se o cpf do cliente é valido ou não
+	 * @return verdadeiro em caso de cpf ser verdadeiro
+	 */
 	public Boolean validaCpf() {
 		boolean cpfValido = false;
 		int decimaPosicao = 10;

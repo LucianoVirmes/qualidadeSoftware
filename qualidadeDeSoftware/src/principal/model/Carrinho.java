@@ -6,10 +6,18 @@ public class Carrinho {
 
 	private ArrayList<Produto> produtos;
 
+	/**
+	 * adiciona um produto no carrinho
+	 * @param prod
+	 */
 	public void addCarrinho(Produto prod) {
 		this.produtos.add(prod);
 	}
-
+	
+	/**
+	 * remove o produto informado por parametro do carrinho
+	 * @param prod
+	 */
 	public void removerCarrinho(Produto prod) {
 		for (Produto p : produtos) {
 			if (p.equals(prod)) {
