@@ -16,7 +16,7 @@ public class ClienteJDBC implements ClienteDAO{
 	public void inserir(Cliente dado) {
 		try {
 			String sql = "insert into cliente values (?,?,?,?,?,?,?,?,?,?,?)";
-			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
+			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			statement.setString(2, dado.getEmail());
 			statement.setString(3, dado.getNome());
 			statement.setString(4, dado.getSobrenome());
