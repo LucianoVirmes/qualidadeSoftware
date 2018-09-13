@@ -16,7 +16,8 @@ public class ClienteJDBC implements ClienteDAO{
 	public void inserir(Cliente dado) {
 		try {
 			String sql = "insert into cliente values (?,?,?,?,?,?,?,?,?,?,?)";
-			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
+			statement.setInt(1, buscarCodigoCliente());
 			statement.setString(2, dado.getEmail());
 			statement.setString(3, dado.getNome());
 			statement.setString(4, dado.getSobrenome());
@@ -28,10 +29,14 @@ public class ClienteJDBC implements ClienteDAO{
 			statement.setString(10, dado.getRua());
 			statement.setString(11, dado.getNumero());
 			
+			/**
+			 * tentativa de implementacao de auto_increment 
+			 * fracassada !
+			 */
+//			ResultSet rs = statement.getGeneratedKeys();
+//			rs.next();
+//			dado.setCodigo(rs.getInt(1));
 			
-			ResultSet rs = statement.getGeneratedKeys();
-			rs.next();
-			dado.setCodigo(rs.getInt(1));
 			statement.executeUpdate();
 			
 		}catch(SQLException e) {
@@ -131,5 +136,24 @@ public class ClienteJDBC implements ClienteDAO{
 		}
 		return cliente;
 	}
+	
+	public Integer buscarCodigoCliente() {
+		Integer retorno = null;
+		try {
+			Statement statement = ConexaoUtil.getConn().createStatement();
+			ResultSet rs = statement.executeQuery("select max(codigo) from cliente");
+			while(rs.next()) {
+				retorno = rs.getRow();
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		if(retorno.equals(null)) {
+			return 1;
+		}else {
+			return Integer.valueOf(retorno);			
+		}
+	}
+	
 
 }
