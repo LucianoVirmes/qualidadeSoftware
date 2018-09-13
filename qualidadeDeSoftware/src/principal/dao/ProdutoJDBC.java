@@ -17,24 +17,18 @@ public class ProdutoJDBC implements ProdutoDAO{
 	public void inserir(Produto dado) {
 		try {
 			String sql = "insert into produto values (?,?,?,?,?,?)";
-			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
+			statement.setInt(1, buscarCodigoProduto());
 			statement.setString(2, dado.getNome());
 			statement.setDouble(3, dado.getValor());
 			statement.setBoolean(4, dado.getDisponibilidade());
 			statement.setString(5, dado.getModelo());
 			statement.setInt(6, dado.getCategoria().getCodigo());
-			
 			statement.executeUpdate();
-			
-			ResultSet rs = statement.getGeneratedKeys();
-			rs.next();
-			dado.setCodigo(rs.getInt(1));
 			
 		}catch(SQLException e) {
 			e.printStackTrace();
 		}
-
-		
 	}
 
 	@Override
@@ -136,6 +130,24 @@ public class ProdutoJDBC implements ProdutoDAO{
 		}
 		return categoria;
 
+	}
+	
+	public Integer buscarCodigoProduto() {
+		Integer retorno = null;
+		try {
+			Statement statement = ConexaoUtil.getConn().createStatement();
+			ResultSet rs = statement.executeQuery("select max(codigo) from produto");
+			while(rs.next()) {
+				retorno = rs.getRow();
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		if(retorno.equals(null)) {
+			return 1;
+		}else {
+			return Integer.valueOf(retorno);			
+		}
 	}
 
 }
