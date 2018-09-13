@@ -9,14 +9,14 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.OfertaController">
    <children>
-      <Pane prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #a54a29;">
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #a54a29;">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Oferta" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
             </Label>
-            <TableView fx:id="tblOferta" layoutY="47.0" onMouseClicked="#selecionaProduto" prefHeight="354.0" prefWidth="700.0">
+            <TableView fx:id="tblOferta" layoutY="47.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#selecionaProduto">
               <columns>
                 <TableColumn fx:id="tbcImagem" prefWidth="161.0" text="Imagem" />
                 <TableColumn fx:id="tbcNome" prefWidth="203.0" text="Nome" />
