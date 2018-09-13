@@ -151,7 +151,7 @@ public class ClienteJDBC implements ClienteDAO{
 		if(retorno.equals(null)) {
 			return 1;
 		}else {
-			return Integer.valueOf(retorno);			
+			return Integer.valueOf(retorno + 1);			
 		}
 	}
 	
