@@ -31,6 +31,11 @@ public class LoginController {
 
 	@FXML
 	void entrar(ActionEvent event) {
-		Main.changeScreen(TipoTela.MENUCLIENTE);
-	}
+		if(tfNomeUsuario.getText().equals("admin") && tfSenha.getText().equals("admin")) {
+			Main.changeScreen(TipoTela.MENUADMIN);
+		}else {
+			Main.changeScreen(TipoTela.MENUCLIENTE);
+				
+		}
+		}
 }
