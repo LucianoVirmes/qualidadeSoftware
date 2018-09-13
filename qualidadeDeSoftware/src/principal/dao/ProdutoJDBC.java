@@ -16,14 +16,13 @@ public class ProdutoJDBC implements ProdutoDAO{
 	@Override
 	public void inserir(Produto dado) {
 		try {
-			String sql = "insert into produto values (?,?,?,?,?,?)";
+			String sql = "insert into produto(nome, valor, disponibilidade, modelo, codCategoria) values (?,?,?,?,?)";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
-			statement.setInt(1, buscarCodigoProduto());
-			statement.setString(2, dado.getNome());
-			statement.setDouble(3, dado.getValor());
-			statement.setBoolean(4, dado.getDisponibilidade());
-			statement.setString(5, dado.getModelo());
-			statement.setInt(6, dado.getCategoria().getCodigo());
+			statement.setString(1, dado.getNome());
+			statement.setDouble(2, dado.getValor());
+			statement.setBoolean(3, dado.getDisponibilidade());
+			statement.setString(4, dado.getModelo());
+			statement.setInt(5, dado.getCategoria().getCodigo());
 			statement.executeUpdate();
 			
 		}catch(SQLException e) {

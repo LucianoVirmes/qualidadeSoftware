@@ -15,27 +15,18 @@ public class ClienteJDBC implements ClienteDAO{
 	@Override
 	public void inserir(Cliente dado) {
 		try {
-			String sql = "insert into cliente values (?,?,?,?,?,?,?,?,?,?,?)";
+			String sql = "insert into cliente(nome, sobrenome,email, senha, cpf, cidade, estado, bairro, rua, numero) values (?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
-			statement.setInt(1, buscarCodigoCliente());
-			statement.setString(2, dado.getEmail());
-			statement.setString(3, dado.getNome());
-			statement.setString(4, dado.getSobrenome());
-			statement.setString(5, dado.getSenha());
-			statement.setString(6, dado.getCpf());
-			statement.setString(7, dado.getCidade());
-			statement.setString(8, dado.getEstado());
-			statement.setString(9, dado.getBairro());
-			statement.setString(10, dado.getRua());
-			statement.setString(11, dado.getNumero());
-			
-			/**
-			 * tentativa de implementacao de auto_increment 
-			 * fracassada !
-			 */
-//			ResultSet rs = statement.getGeneratedKeys();
-//			rs.next();
-//			dado.setCodigo(rs.getInt(1));
+			statement.setString(1, dado.getNome());
+			statement.setString(2, dado.getSobrenome());
+			statement.setString(3, dado.getEmail());
+			statement.setString(4, dado.getSenha());
+			statement.setString(5, dado.getCpf());
+			statement.setString(6, dado.getCidade());
+			statement.setString(7, dado.getEstado());
+			statement.setString(8, dado.getBairro());
+			statement.setString(9, dado.getRua());
+			statement.setString(10, dado.getNumero());
 			
 			statement.executeUpdate();
 			
