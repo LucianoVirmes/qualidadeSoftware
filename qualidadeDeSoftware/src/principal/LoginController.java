@@ -3,6 +3,7 @@ package principal;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 
@@ -12,7 +13,7 @@ public class LoginController {
 	private TextField tfNomeUsuario;
 
 	@FXML
-	private TextField tfSenha;
+	private PasswordField tfSenha;
 
 	@FXML
 	private Button btnEntrar;
