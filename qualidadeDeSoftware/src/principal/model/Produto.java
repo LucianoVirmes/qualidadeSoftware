@@ -7,21 +7,30 @@ public class Produto {
 	private Double valor;
 	private Boolean disponibilidade;
 	private String modelo;
+	private Double porcentagemDesconto;
 
 	private Categoria categoria;
+	
+	/**
+	 * calcula valor do produto com desconto
+	 */
+	public Double valorProduto() {
+		return this.valor - (this.porcentagemDesconto / 100);
+	}
 
 	public Produto() {
 
 	}
 
 	public Produto(Integer codigo, String nome, Double valor, Boolean disponibilidade, String modelo,
-			Categoria categoria) {
+			Double porcentagemDesconto, Categoria categoria) {
 		super();
 		this.codigo = codigo;
 		this.nome = nome;
 		this.valor = valor;
 		this.disponibilidade = disponibilidade;
 		this.modelo = modelo;
+		this.porcentagemDesconto = porcentagemDesconto;
 		this.categoria = categoria;
 	}
 
@@ -73,10 +82,19 @@ public class Produto {
 		this.codigo = codigo;
 	}
 
+	public Double getPorcentagemDesconto() {
+		return porcentagemDesconto;
+	}
+
+	public void setPorcentagemDesconto(Double porcentagemDesconto) {
+		this.porcentagemDesconto = porcentagemDesconto;
+	}
+
 	@Override
 	public String toString() {
 		return "Produto [codigo=" + codigo + ", nome=" + nome + ", valor=" + valor + ", disponibilidade="
-				+ disponibilidade + ", modelo=" + modelo + ", categoria=" + categoria + "]";
+				+ disponibilidade + ", modelo=" + modelo + ", porcentagemDesconto=" + porcentagemDesconto
+				+ ", categoria=" + categoria + "]";
 	}
 
 }

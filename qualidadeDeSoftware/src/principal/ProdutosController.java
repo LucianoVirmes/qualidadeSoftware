@@ -7,23 +7,25 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import principal.model.Categoria;
+import principal.model.Produto;
 
 public class ProdutosController {
 
     @FXML
-    private TableView<?> tblProdutos;
+    private TableView<Produto> tblProdutos;
 
     @FXML
-    private TableColumn<?, ?> tbcNome;
+    private TableColumn<Produto, String> tbcNome;
 
     @FXML
-    private TableColumn<?, ?> tbcModelo;
+    private TableColumn<Produto, String> tbcModelo;
 
     @FXML
-    private TableColumn<?, ?> tbcValor;
+    private TableColumn<Produto, Double> tbcValor;
 
     @FXML
-    private ComboBox<?> cbxClassificacao;
+    private ComboBox<Categoria> cbxClassificacao;
 
     @FXML
     private Button btnSelecionar;

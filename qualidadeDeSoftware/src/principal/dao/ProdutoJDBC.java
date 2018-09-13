@@ -16,13 +16,14 @@ public class ProdutoJDBC implements ProdutoDAO{
 	@Override
 	public void inserir(Produto dado) {
 		try {
-			String sql = "insert into produto(nome, valor, disponibilidade, modelo, codCategoria) values (?,?,?,?,?)";
+			String sql = "insert into produto(nome, valor, disponibilidade, modelo, porcentagemDesconto,codCategoria) values (?,?,?,?,?,?)";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			statement.setString(1, dado.getNome());
 			statement.setDouble(2, dado.getValor());
 			statement.setBoolean(3, dado.getDisponibilidade());
 			statement.setString(4, dado.getModelo());
-			statement.setInt(5, dado.getCategoria().getCodigo());
+			statement.setDouble(5, dado.getPorcentagemDesconto());
+			statement.setInt(6, dado.getCategoria().getCodigo());
 			statement.executeUpdate();
 			
 		}catch(SQLException e) {
@@ -33,15 +34,16 @@ public class ProdutoJDBC implements ProdutoDAO{
 	@Override
 	public void alterar(Produto dado) {
 		try {
-			String sql = "update produto set nome = ?, valor = ?, disponibilidade= ?, modelo=?, codCategoria = ? where codigo = ?";
+			String sql = "update produto set nome = ?, valor = ?, disponibilidade= ?, modelo=?, porcentagemDesconto = ? codCategoria = ? where codigo = ?";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			
 			statement.setString(1, dado.getNome());
 			statement.setDouble(2, dado.getValor());
 			statement.setBoolean(3, dado.getDisponibilidade());
 			statement.setString(4, dado.getModelo());
-			statement.setInt(5, dado.getCodigo());
+			statement.setDouble(5, dado.getPorcentagemDesconto());
 			statement.setInt(6, dado.getCategoria().getCodigo());
+			statement.setInt(7, dado.getCodigo());
 			statement.executeUpdate();
 		}catch(SQLException e) {
 			e.printStackTrace();
@@ -74,6 +76,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 				produto.setValor(rs.getDouble("valor"));
 				produto.setDisponibilidade(rs.getBoolean("disponibilidade"));
 				produto.setModelo(rs.getString("modelo"));
+				produto.setPorcentagemDesconto(rs.getDouble("porcentagemDesconto"));
 				produto.setCategoria(buscarCategoria(rs.getInt("codCategoria")));
 				
 				produtos.add(produto);
@@ -100,6 +103,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 				produto.setValor(rs1.getDouble("valor"));
 				produto.setDisponibilidade(rs1.getBoolean("disponibilidade"));
 				produto.setModelo(rs1.getString("modelo"));
+				produto.setPorcentagemDesconto(rs1.getDouble("porcentagemDesconto"));
 				produto.setCategoria(buscarCategoria(rs1.getInt("codCategoria")));
 				
 			}
@@ -148,5 +152,29 @@ public class ProdutoJDBC implements ProdutoDAO{
 			return Integer.valueOf(retorno + 1);			
 		}
 	}
+	
+	public List<Produto> ProdutosEmOferta() {
+		List<Produto> produtos = new ArrayList<>();
+		try {
+			Statement statement = ConexaoUtil.getConn().createStatement();
+			ResultSet rs = statement.executeQuery("select * from produto where porcentagemDesconto > 0");
+			while(rs.next()) {
+				Produto produto = new Produto();
+				produto.setCodigo(rs.getInt("codigo"));
+				produto.setNome(rs.getString("nome"));
+				produto.setValor(rs.getDouble("valor"));
+				produto.setDisponibilidade(rs.getBoolean("disponibilidade"));
+				produto.setModelo(rs.getString("modelo"));
+				produto.setPorcentagemDesconto(rs.getDouble("porcentagemDesconto"));
+				produto.setCategoria(buscarCategoria(rs.getInt("codCategoria")));				
+				produtos.add(produto);
+			}
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return produtos;
+
+	}
+ 
 
 }

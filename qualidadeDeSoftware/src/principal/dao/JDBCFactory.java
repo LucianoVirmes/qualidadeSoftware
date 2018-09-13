@@ -12,5 +12,10 @@ public class JDBCFactory implements DaoFactory{
 		return new ProdutoJDBC();
 	}
 
+	@Override
+	public CategoriaDAO categoriaDAO() {
+		return new CategoriaJDBC();
+	}
+
 
 }

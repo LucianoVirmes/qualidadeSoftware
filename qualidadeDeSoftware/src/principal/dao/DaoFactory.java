@@ -5,4 +5,6 @@ public interface DaoFactory {
 	ClienteDAO clienteDao();
 	
 	ProdutoDAO produtoDAO();
+	
+	CategoriaDAO categoriaDAO();
 }
