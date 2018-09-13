@@ -29,7 +29,7 @@ public class AdminMenuController {
 	@FXML
 	void menuAddAdmin(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("AdicionaAdminForm.fxml"));
+		loader.setLocation(getClass().getResource("AdicionarAdminForm.fxml"));
 		try {
 			AnchorPane cursoView = (AnchorPane) loader.load();
 			bpPrincipalAdmin.setCenter(cursoView);
@@ -41,7 +41,7 @@ public class AdminMenuController {
 	@FXML
 	void menuAddProdutos(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("EditarProdutos.fxml"));
+		loader.setLocation(getClass().getResource("EditarProdutosForm.fxml"));
 		try {
 			AnchorPane cursoView = (AnchorPane) loader.load();
 			bpPrincipalAdmin.setCenter(cursoView);
@@ -53,7 +53,7 @@ public class AdminMenuController {
 	@FXML
 	void menuCategorias(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("EditarCategoria.fxml"));
+		loader.setLocation(getClass().getResource("EditarCategoriaForm.fxml"));
 		try {
 			AnchorPane cursoView = (AnchorPane) loader.load();
 			bpPrincipalAdmin.setCenter(cursoView);
@@ -65,7 +65,7 @@ public class AdminMenuController {
 	@FXML
 	void menuEditarAdmin(ActionEvent event) {
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("EditarAdmin.fxml"));
+		loader.setLocation(getClass().getResource("EditarAdminForm.fxml"));
 		try {
 			AnchorPane cursoView = (AnchorPane) loader.load();
 			bpPrincipalAdmin.setCenter(cursoView);

@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pricipal.AdicionarAdminController">
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.AdicionarAdminController">
    <children>
-      <Pane layoutY="-7.0" prefHeight="398.0" prefWidth="430.0" style="-fx-background-color: #668B8B;">
+      <Pane layoutY="-7.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-background-color: #668B8B;">
          <children>
             <Label graphicTextGap="5.0" layoutX="25.0" layoutY="14.0" text="Cadastrar Administrador" textFill="WHITE" textOverrun="CLIP">
                <font>
