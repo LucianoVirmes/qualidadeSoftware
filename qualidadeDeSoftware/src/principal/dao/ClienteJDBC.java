@@ -38,7 +38,7 @@ public class ClienteJDBC implements ClienteDAO{
 	@Override
 	public void alterar(Cliente dado) {
 		try {
-			String sql = "update cliente set email = ?, nome = ?, sobrenome = ?, senha=?, cpf =?, cidade=?, estado=?, bairro=?, rua=? numero = ? where codigo = ?";
+			String sql = "update cliente set email = ?, nome = ?, sobrenome = ?, senha=?, cpf =?, cidade=?, estado=?, bairro=?, rua=?, numero = ? where codigo = ?";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			
 			statement.setString(1, dado.getEmail());
@@ -128,23 +128,34 @@ public class ClienteJDBC implements ClienteDAO{
 		return cliente;
 	}
 	
-	public Integer buscarCodigoCliente() {
-		Integer retorno = null;
+	public Cliente buscarPorNome(String n) {
+		Cliente cliente = null;
 		try {
-			Statement statement = ConexaoUtil.getConn().createStatement();
-			ResultSet rs = statement.executeQuery("select max(codigo) from cliente");
-			while(rs.next()) {
-				retorno = rs.getRow();
+			String sql = "select * from cliente where nome = ?";
+			PreparedStatement ps = ConexaoUtil.getConn().prepareStatement(sql);
+			ps.setString(1, n);
+			ResultSet rs1 = ps.executeQuery();
+			while(rs1.next()) {
+				cliente = new Cliente();
+				cliente.setEmail(rs1.getString("email"));
+				cliente.setNome(rs1.getString("nome"));
+				cliente.setSobrenome(rs1.getString("sobrenome"));
+				cliente.setSenha(rs1.getString("senha"));
+				cliente.setCpf(rs1.getString("cpf"));
+				cliente.setCidade(rs1.getString("cidade"));
+				cliente.setEstado(rs1.getString("estado"));
+				cliente.setBairro(rs1.getString("bairro"));
+				cliente.setRua(rs1.getString("rua"));
+				cliente.setNumero(rs1.getString("numero"));
+				cliente.setCodigo(rs1.getInt("codigo"));
 			}
-		}catch(SQLException e) {
+		}catch(SQLException e){
 			e.printStackTrace();
 		}
-		if(retorno.equals(null)) {
-			return 1;
-		}else {
-			return Integer.valueOf(retorno + 1);			
-		}
+		return cliente;
 	}
+
+	
 	
 
 }

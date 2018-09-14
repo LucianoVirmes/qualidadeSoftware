@@ -110,6 +110,21 @@ public class Cliente {
 		this.numero = numero;
 		this.carrinho = carrinho;
 	}
+	
+	public Cliente(String email, String nome, String sobrenome, String senha, String cpf, String cidade,
+			String estado, String bairro, String rua, String numero, Carrinho carrinho) {
+		this.email = email;
+		this.nome = nome;
+		this.sobrenome = sobrenome;
+		this.senha = senha;
+		this.cpf = cpf;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.bairro = bairro;
+		this.rua = rua;
+		this.numero = numero;
+		this.carrinho = carrinho;
+	}
 
 	public String getEmail() {
 		return email;
