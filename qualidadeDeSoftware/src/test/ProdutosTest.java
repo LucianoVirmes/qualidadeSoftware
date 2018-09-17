@@ -25,6 +25,16 @@ class ProdutosTest {
 		assertEquals(p, p1);
 		
 		
+		assertEquals(Integer.valueOf(1), p1.getCodigo());
+		assertEquals("nome", p1.getNome());
+		assertEquals(Double.valueOf(100.00), p1.getValor());
+		assertEquals(true, p1.getDisponibilidade());
+		assertEquals("modelo", p1.getModelo());
+		assertEquals(Double.valueOf(20.0), p1.getPorcentagemDesconto());
+		assertEquals(null, p1.getCategoria());
+		
+		
+		
 	}
 
 }

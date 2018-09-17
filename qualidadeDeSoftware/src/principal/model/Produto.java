@@ -33,6 +33,16 @@ public class Produto {
 		this.porcentagemDesconto = porcentagemDesconto;
 		this.categoria = categoria;
 	}
+	
+	public Produto(String nome, Double valor, Boolean disponibilidade, String modelo,
+			Double porcentagemDesconto, Categoria categoria) {
+		this.nome = nome;
+		this.valor = valor;
+		this.disponibilidade = disponibilidade;
+		this.modelo = modelo;
+		this.porcentagemDesconto = porcentagemDesconto;
+		this.categoria = categoria;
+	}
 
 	public String getNome() {
 		return nome;
@@ -101,13 +111,7 @@ public class Produto {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((categoria == null) ? 0 : categoria.hashCode());
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
-		result = prime * result + ((disponibilidade == null) ? 0 : disponibilidade.hashCode());
 		result = prime * result + ((modelo == null) ? 0 : modelo.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + ((porcentagemDesconto == null) ? 0 : porcentagemDesconto.hashCode());
-		result = prime * result + ((valor == null) ? 0 : valor.hashCode());
 		return result;
 	}
 
@@ -120,44 +124,13 @@ public class Produto {
 		if (getClass() != obj.getClass())
 			return false;
 		Produto other = (Produto) obj;
-		if (categoria == null) {
-			if (other.categoria != null)
-				return false;
-		} else if (!categoria.equals(other.categoria))
-			return false;
-		if (codigo == null) {
-			if (other.codigo != null)
-				return false;
-		} else if (!codigo.equals(other.codigo))
-			return false;
-		if (disponibilidade == null) {
-			if (other.disponibilidade != null)
-				return false;
-		} else if (!disponibilidade.equals(other.disponibilidade))
-			return false;
 		if (modelo == null) {
 			if (other.modelo != null)
 				return false;
 		} else if (!modelo.equals(other.modelo))
 			return false;
-		if (nome == null) {
-			if (other.nome != null)
-				return false;
-		} else if (!nome.equals(other.nome))
-			return false;
-		if (porcentagemDesconto == null) {
-			if (other.porcentagemDesconto != null)
-				return false;
-		} else if (!porcentagemDesconto.equals(other.porcentagemDesconto))
-			return false;
-		if (valor == null) {
-			if (other.valor != null)
-				return false;
-		} else if (!valor.equals(other.valor))
-			return false;
 		return true;
 	}
-	
-	
 
+	
 }

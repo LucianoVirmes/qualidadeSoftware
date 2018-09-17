@@ -28,7 +28,18 @@ public class ClienteTest {
 		
 		assertEquals(cliente, c);
 		
-		
+		assertEquals(Integer.valueOf(1), c.getCodigo());
+		assertEquals("nome", c.getNome());
+		assertEquals("email", c.getEmail());
+		assertEquals("sobrenome", c.getSobrenome());
+		assertEquals("cpf", c.getCpf());
+		assertEquals("senha", c.getSenha());
+		assertEquals("cidade", c.getCidade());
+		assertEquals("estado", c.getEstado());
+		assertEquals("bairro", c.getBairro());
+		assertEquals("rua", c.getRua());
+		assertEquals("numero", c.getNumero());
+		assertEquals(null, c.getCarrinho());
 
 	}
 

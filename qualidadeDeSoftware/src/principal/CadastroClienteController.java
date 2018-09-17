@@ -74,46 +74,27 @@ public class CadastroClienteController {
 	@FXML
 	void cadastrar(ActionEvent event) {
 		populaCliente();
-		if (verificaCliente()) {
-			clienteDao.inserir(cliente);
-			Alert alerta = new Alert(AlertType.INFORMATION, "Cadastro realizado com sucesso", ButtonType.OK);
-			// Button okButton = (Button)
-			// alerta.getDialogPane().lookupButton(ButtonType.OK);
-			// okButton.setDefaultButton(false);
-			// okButton.setText("OK");
-			final Optional<ButtonType> result = alerta.showAndWait();
-			
-			if (ButtonType.OK.equals(result.get())) {
-				Main.changeScreen(TipoTela.LOGIN);
+		if(cliente.validaCpf()) {
+			if (verificaCliente()) {
+				clienteDao.inserir(cliente);
+				Alert alerta = new Alert(AlertType.INFORMATION, "Cadastro realizado com sucesso", ButtonType.OK);
+				final Optional<ButtonType> result = alerta.showAndWait();
+				if (ButtonType.OK.equals(result.get())) {
+					Main.changeScreen(TipoTela.LOGIN);
+				}
+			} else {
+				Alert alerta = new Alert(AlertType.WARNING, "O cadastro não pode ser efetuado", ButtonType.OK);
+				final Optional<ButtonType> result = alerta.showAndWait();
+				if (ButtonType.OK.equals(result.get())) {
+					novoCliente();
+				}
 			}
-		} else {
-			Alert alerta = new Alert(AlertType.WARNING, "O cadastro não pode ser efetuado", ButtonType.OK);
-//				 Button okButton = (Button)
-//				 alerta.getDialogPane().lookupButton(ButtonType.OK);
-//				 okButton.setDefaultButton(false);
-//				 okButton.setText("OK");
-			final Optional<ButtonType> result = alerta.showAndWait();
-			if (ButtonType.OK.equals(result.get())) {
-				novoCliente();
-			}
+			novoCliente();
+		}else {
+			Alert alerta = new Alert(AlertType.WARNING, "O CPF não é válido", ButtonType.OK);
+			alerta.showAndWait();
 		}
-			
-
-//			{
-//		Alert alerta = new Alert(AlertType.WARNING, "o CPF não é válido", ButtonType.OK);
-//		// Button okButton = (Button)
-//		// alerta.getDialogPane().lookupButton(ButtonType.OK);
-//		// okButton.setDefaultButton(false);
-//		// okButton.setText("OK");
-//		final Optional<ButtonType> result = alerta.showAndWait();
-//		if (ButtonType.OK.equals(result.get())) {
-//			novoCliente();
-//		}
-		//}
-
-	novoCliente();
-
-	}
+	}			
 
 	/**
 	 * popula o obj cliente com o conteudo dos campos da tela
