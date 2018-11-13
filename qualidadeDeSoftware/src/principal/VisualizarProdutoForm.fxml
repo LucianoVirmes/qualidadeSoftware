@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="principal.VisualizarProdutoController">
    <children>
-      <Pane prefHeight="265.0" prefWidth="284.0" style="-fx-background-color: #668B8B;">
+      <Pane prefHeight="350.0" prefWidth="433.0" style="-fx-background-color: #668B8B;">
          <children>
             <Label layoutX="14.0" layoutY="14.0" text="Detalhes do produto" textFill="WHITE">
                <font>
@@ -24,7 +24,7 @@
             <Label layoutX="99.0" layoutY="183.0" text="Valor:" textFill="WHITE" />
             <Label layoutX="97.0" layoutY="146.0" text="Quantidade:" textFill="WHITE" />
             <TextField fx:id="tfQuantidade" layoutX="178.0" layoutY="141.0" prefHeight="27.0" prefWidth="40.0" />
-            <Button fx:id="btnAdionar" layoutX="99.0" layoutY="222.0" mnemonicParsing="false" onAction="#adicionarCarrinho" text="Adionar no carrinho" />
+            <Button fx:id="btnAdionar" layoutX="270.0" layoutY="309.0" mnemonicParsing="false" onAction="#adicionarCarrinho" text="Adionar no carrinho" />
          </children>
       </Pane>
    </children>

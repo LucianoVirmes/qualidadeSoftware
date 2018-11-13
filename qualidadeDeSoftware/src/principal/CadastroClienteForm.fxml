@@ -16,64 +16,64 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="97.0" layoutY="120.0" text="Nome" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="134.0" layoutY="120.0" text="Nome" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="94.0" layoutY="169.0" text="Sobrenome" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="90.0" layoutY="169.0" text="Sobrenome" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="94.0" layoutY="217.0" text="CPF" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="150.0" layoutY="217.0" text="CPF" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="93.0" layoutY="262.0" text="Estado" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="128.0" layoutY="262.0" text="Estado" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="93.0" layoutY="305.0" text="Cidade" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="127.0" layoutY="305.0" text="Cidade" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="93.0" layoutY="348.0" text="Bairro" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="136.0" layoutY="351.0" text="Bairro" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="95.0" layoutY="393.0" text="Rua" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="151.0" layoutY="393.0" text="Rua" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="94.0" layoutY="435.0" text="Numero" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="118.0" layoutY="435.0" text="Numero" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label graphicTextGap="5.0" layoutX="94.0" layoutY="477.0" text="Email" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="134.0" layoutY="477.0" text="Email" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="tfNome" layoutX="167.0" layoutY="118.0" prefHeight="27.0" prefWidth="378.0" />
+            <TextField fx:id="tfNome" layoutX="200.0" layoutY="118.0" prefHeight="27.0" prefWidth="353.0" />
             <TextField fx:id="tfSobrenome" layoutX="201.0" layoutY="167.0" prefHeight="27.0" prefWidth="353.0" />
-            <TextField fx:id="tfCpf" layoutX="144.0" layoutY="214.0" />
-            <TextField fx:id="tfEstado" layoutX="161.0" layoutY="260.0" />
-            <TextField fx:id="tfCidade" layoutX="159.0" layoutY="303.0" prefHeight="27.0" prefWidth="182.0" />
-            <TextField fx:id="tfBairro" layoutX="157.0" layoutY="346.0" prefHeight="27.0" prefWidth="182.0" />
-            <TextField fx:id="tfRua" layoutX="144.0" layoutY="391.0" prefHeight="27.0" prefWidth="201.0" />
-            <TextField fx:id="tfNumero" layoutX="167.0" layoutY="433.0" prefHeight="27.0" prefWidth="95.0" />
-            <TextField fx:id="tfEmail" layoutX="152.0" layoutY="473.0" prefHeight="27.0" prefWidth="237.0" />
-            <TextField fx:id="tfSenha" layoutX="152.0" layoutY="525.0" prefHeight="27.0" prefWidth="237.0" />
-            <Button fx:id="btnCadastrar" layoutX="445.0" layoutY="519.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="100.0" text="Cadastrar" />
+            <TextField fx:id="tfCpf" layoutX="200.0" layoutY="215.0" prefHeight="27.0" prefWidth="257.0" />
+            <TextField fx:id="tfEstado" layoutX="200.0" layoutY="260.0" prefHeight="27.0" prefWidth="257.0" />
+            <TextField fx:id="tfCidade" layoutX="200.0" layoutY="303.0" prefHeight="27.0" prefWidth="257.0" />
+            <TextField fx:id="tfBairro" layoutX="202.0" layoutY="349.0" prefHeight="27.0" prefWidth="257.0" />
+            <TextField fx:id="tfRua" layoutX="200.0" layoutY="391.0" prefHeight="27.0" prefWidth="353.0" />
+            <TextField fx:id="tfNumero" layoutX="200.0" layoutY="433.0" prefHeight="27.0" prefWidth="95.0" />
+            <TextField fx:id="tfEmail" layoutX="200.0" layoutY="475.0" prefHeight="27.0" prefWidth="353.0" />
+            <TextField fx:id="tfSenha" layoutX="194.0" layoutY="526.0" prefHeight="27.0" prefWidth="237.0" />
+            <Button fx:id="btnCadastrar" layoutX="537.0" layoutY="519.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="40.0" prefWidth="100.0" text="Cadastrar" />
             <Button fx:id="btnVoltar" layoutX="660.0" layoutY="519.0" mnemonicParsing="false" onAction="#voltar" prefHeight="40.0" prefWidth="100.0" text="Voltar" />
-            <Label graphicTextGap="5.0" layoutX="95.0" layoutY="527.0" text="Senha" textFill="WHITE" textOverrun="CLIP">
+            <Label graphicTextGap="5.0" layoutX="130.0" layoutY="528.0" text="Senha" textFill="WHITE" textOverrun="CLIP">
                <font>
                   <Font size="18.0" />
                </font>
