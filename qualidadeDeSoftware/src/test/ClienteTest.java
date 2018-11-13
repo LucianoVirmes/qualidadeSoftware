@@ -43,4 +43,16 @@ public class ClienteTest {
 
 	}
 
+	@Test
+	public void testaCpf() throws Exception{
+		Cliente cliente = new Cliente();
+		cliente.setCpf("12345678912");
+		
+		assertEquals(false, cliente.validaCpf());
+		
+		cliente.setCpf("78727789047");
+		
+		assertEquals(true, cliente.validaCpf());
+		
+	}
 }
