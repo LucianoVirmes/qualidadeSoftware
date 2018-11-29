@@ -21,6 +21,7 @@ class BancoClienteTest {
 			}
 		}
 		
+		
 		clienteDao.alterar(cliente);
 		//Cliente cl = clienteDao.buscarPorNome(cliente.getNome());
 		clienteDao.excluir(cliente.getCodigo());
