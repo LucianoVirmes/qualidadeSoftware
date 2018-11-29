@@ -20,11 +20,13 @@ class BancoClienteTest {
 				cliente.setCodigo(achou.getCodigo());
 			}
 		}
-		
+		 
 		
 		clienteDao.alterar(cliente);
-		//Cliente cl = clienteDao.buscarPorNome(cliente.getNome());
+		Cliente cl = clienteDao.buscarPorNome(cliente.getNome());
 		clienteDao.excluir(cliente.getCodigo());
+		
+		clienteDao.buscar(cliente.getCodigo());
 		
 	}
 

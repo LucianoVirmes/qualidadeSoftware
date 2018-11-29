@@ -22,13 +22,13 @@ class BancoProdutoTest {
 			if(achou.equals(p)) {
 				p.setCodigo(achou.getCodigo());
 			}
-		}
+		} 
 		
 		p.setNome("nome02");
 		produtoDao.alterar(p);
 		produtoDao.excluir(p.getCodigo());
 		
-		
+		produtoDao.buscar(p.getCodigo());
 
 	}
 
