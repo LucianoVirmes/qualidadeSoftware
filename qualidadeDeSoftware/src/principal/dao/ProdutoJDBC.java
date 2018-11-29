@@ -34,7 +34,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 	@Override
 	public void alterar(Produto dado) {
 		try {
-			String sql = "update produto set nome = ?, valor = ?, disponibilidade= ?, modelo=?, porcentagemDesconto = ? codCategoria = ? where codigo = ?";
+			String sql = "update produto set nome = ?, valor = ?, disponibilidade= ?, modelo=?, porcentagemDesconto = ?, codCategoria = ? where codigo = ?";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			
 			statement.setString(1, dado.getNome());
