@@ -60,7 +60,7 @@ public class CategoriaJDBC implements CategoriaDAO{
 		List<Categoria> categorias = new ArrayList<>();
 		try {
 			Statement statement = ConexaoUtil.getConn().createStatement();
-			ResultSet rs = statement.executeQuery("select * from cliente");
+			ResultSet rs = statement.executeQuery("select * from categoria");
 			while(rs.next()) {
 				Categoria categoria = new Categoria();
 				categoria.setCodigo(rs.getInt("codigo"));

@@ -26,6 +26,7 @@ public class VisualizarProdutoController {
     @FXML
     void adicionarCarrinho(ActionEvent event) {
 
+    	
     }
 	
 }

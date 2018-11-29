@@ -55,7 +55,8 @@ public class EditarProdutosController {
 
 	@FXML
 	private TextField tfProcentagemDesconto;
-
+	
+	
 	@FXML
 	private Button btnExcluir;
 
@@ -77,7 +78,7 @@ public class EditarProdutosController {
 	private void initialize() {
 		tbcNome.setCellValueFactory(new PropertyValueFactory<>("nome"));
 		tbcModelo.setCellValueFactory(new PropertyValueFactory<>("modelo"));
-		tbcClassificacao.setCellValueFactory(new PropertyValueFactory<>("classificacao"));
+		tbcClassificacao.setCellValueFactory(new PropertyValueFactory<>("categoria"));
 		tbcPreco.setCellValueFactory(new PropertyValueFactory<>("valor"));
 		tbcDesconto.setCellValueFactory(new PropertyValueFactory<>("porcentagemDesconto"));
 		populaCombo();
@@ -118,7 +119,7 @@ public class EditarProdutosController {
 
 		if (editando) {
 			produtoDao.alterar(produto);
-			Alert alerta = new Alert(AlertType.INFORMATION, "AlteraÃ§Ã£o salva com sucesso", ButtonType.OK);
+			Alert alerta = new Alert(AlertType.INFORMATION, "Alteração salva com sucesso", ButtonType.OK);
 			alerta.showAndWait();
 		} else {
 			produtoDao.inserir(produto);

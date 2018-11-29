@@ -44,7 +44,7 @@ public class Categoria {
 
 	@Override
 	public String toString() {
-		return "Categoria [codigo=" + codigo + ", nome=" + nome + ", produtos=" + produtos + "]";
+		return this.nome;
 	}
 
 }
