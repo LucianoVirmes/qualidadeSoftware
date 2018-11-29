@@ -20,6 +20,9 @@ public class ProdutoJDBC implements ProdutoDAO{
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			statement.setString(1, dado.getNome());
 			statement.setDouble(2, dado.getValor());
+			if(dado.getDisponibilidade() ==  null) {
+				dado.setDisponibilidade(true);
+			}
 			statement.setBoolean(3, dado.getDisponibilidade());
 			statement.setString(4, dado.getModelo());
 			statement.setDouble(5, dado.getPorcentagemDesconto());
@@ -34,7 +37,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 	@Override
 	public void alterar(Produto dado) {
 		try {
-			String sql = "update produto set nome = ?, valor = ?, disponibilidade= ?, modelo=?, porcentagemDesconto = ?, codCategoria = ? where codigo = ?";
+			String sql = "update produto set nome = ?, valor = ?, disponibilidade= ?, modelo= ?, porcentagemDesconto = ?, codCategoria = ? where codigo = ?";
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			
 			statement.setString(1, dado.getNome());
@@ -170,7 +173,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 				produtos.add(produto);
 			}
 		}catch(SQLException e) {
-			e.printStackTrace(); 
+			e.printStackTrace();
 		}
 		return produtos;
 
