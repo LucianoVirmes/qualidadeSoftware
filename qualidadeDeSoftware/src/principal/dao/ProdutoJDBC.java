@@ -170,7 +170,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 				produtos.add(produto);
 			}
 		}catch(SQLException e) {
-			e.printStackTrace();
+			e.printStackTrace(); 
 		}
 		return produtos;
 
