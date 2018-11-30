@@ -136,7 +136,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 	}
 	
 	
-	public List<Produto> ProdutosEmOferta() {
+	public List<Produto> produtosEmOferta() {
 		List<Produto> produtos = new ArrayList<>();
 		try {
 			Statement statement = ConexaoUtil.getConn().createStatement();
