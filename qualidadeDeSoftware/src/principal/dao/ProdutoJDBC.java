@@ -135,23 +135,6 @@ public class ProdutoJDBC implements ProdutoDAO{
 
 	}
 	
-	public Integer buscarCodigoProduto() {
-		Integer retorno = null;
-		try {
-			Statement statement = ConexaoUtil.getConn().createStatement();
-			ResultSet rs = statement.executeQuery("select max(codigo) from produto");
-			while(rs.next()) {
-				retorno = rs.getRow();
-			}
-		}catch(SQLException e) {
-			e.printStackTrace();
-		}
-		if(retorno.equals(null)) {
-			return 1;
-		}else {
-			return Integer.valueOf(retorno + 1);			
-		}
-	}
 	
 	public List<Produto> ProdutosEmOferta() {
 		List<Produto> produtos = new ArrayList<>();
