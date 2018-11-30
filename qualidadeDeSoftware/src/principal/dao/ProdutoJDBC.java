@@ -20,6 +20,7 @@ public class ProdutoJDBC implements ProdutoDAO{
 			PreparedStatement statement = ConexaoUtil.getConn().prepareStatement(sql);
 			statement.setString(1, dado.getNome());
 			statement.setDouble(2, dado.getValor());
+			dado.setDisponibilidade(true);
 			statement.setBoolean(3, dado.getDisponibilidade());
 			statement.setString(4, dado.getModelo());
 			statement.setDouble(5, dado.getPorcentagemDesconto());
