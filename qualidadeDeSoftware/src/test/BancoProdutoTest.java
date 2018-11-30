@@ -1,5 +1,11 @@
 package test;
 
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import org.junit.jupiter.api.Test;
 
 import principal.dao.CategoriaJDBC;
@@ -24,11 +30,15 @@ class BancoProdutoTest {
 			}
 		} 
 		
+		Produto editado = produtoDao.buscar(p.getCodigo());
+		assertEquals(p, editado);
+		
 		p.setNome("nome02");
 		produtoDao.alterar(p);
+		assertFalse(produtoDao.buscar(p.getCodigo()) == editado);
 		produtoDao.excluir(p.getCodigo());
 		
-		produtoDao.buscar(p.getCodigo());
+		assertNull(produtoDao.buscar(p.getCodigo()));
 
 	}
 

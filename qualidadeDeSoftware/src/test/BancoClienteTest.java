@@ -1,4 +1,8 @@
 package test;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.junit.jupiter.api.Test;
 import principal.dao.ClienteJDBC;
 import principal.model.Cliente;
@@ -21,12 +25,17 @@ class BancoClienteTest {
 			}
 		}
 		 
+		Cliente cl = clienteDao.buscarPorNome(cliente.getNome());
+		assertEquals(cl, cliente);
+				
+		Cliente clienteCod = clienteDao.buscar(cliente.getCodigo());
+		assertEquals(clienteCod, cliente);
 		
 		clienteDao.alterar(cliente);
-		Cliente cl = clienteDao.buscarPorNome(cliente.getNome());
+		assertFalse(clienteDao.buscar(cliente.getCodigo()) == clienteCod);
 		clienteDao.excluir(cliente.getCodigo());
 		
-		clienteDao.buscar(cliente.getCodigo());
+		assertNull(clienteDao.buscar(cliente.getCodigo()));
 		
 	}
 
