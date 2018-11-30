@@ -83,13 +83,15 @@ public class CategoriaJDBC implements CategoriaDAO{
 			ResultSet rs1 = ps.executeQuery();
 			while(rs1.next()) {
 				categoria = new Categoria();
-				categoria.setNome(rs1.getString("nome"));
 				categoria.setCodigo(rs1.getInt("codigo"));
+				categoria.setNome(rs1.getString("nome"));
+
 			}
 		}catch(SQLException e){
 			e.printStackTrace();
 		}
 		return categoria;
+
 	}
 
 }
