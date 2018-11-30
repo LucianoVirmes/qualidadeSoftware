@@ -26,7 +26,8 @@ class BancoProdutoTest {
 			if(achou.equals(p)) {
 				p.setCodigo(achou.getCodigo());
 			}
-		} 
+		}
+		
 		
 		Produto editado = produtoDao.buscar(p.getCodigo());
 		assertEquals(p, editado);
@@ -39,5 +40,23 @@ class BancoProdutoTest {
 		assertNull(produtoDao.buscar(p.getCodigo()));
 
 	}
+	
+	@Test
+	void testeProdutoEmOferta() {
+		CategoriaJDBC categoriaDao = new CategoriaJDBC();
+		Categoria c = categoriaDao.buscar(1);
+		Produto p = new Produto("nome", 100.0, true, "modelo", 2.0, c);
+		ProdutoJDBC produtoDao = new ProdutoJDBC();
+		
+		produtoDao.inserir(p);
+		Produto prOferta = new Produto();
+		for(Produto oferta:produtoDao.produtosEmOferta()) {
+			if(oferta.equals(p)) {
+				prOferta = produtoDao.buscar(oferta.getCodigo());
+			}
+		}
+		assertEquals(p,prOferta);
+	}
+	
 
 }
