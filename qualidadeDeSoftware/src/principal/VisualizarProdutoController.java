@@ -22,6 +22,11 @@ public class VisualizarProdutoController {
 
     @FXML
     private Button btnAdionar;
+    
+    		
+    @FXML
+	private void initialize() {
+	}
 
     @FXML
     void adicionarCarrinho(ActionEvent event) {
